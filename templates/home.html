@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Income Classifier</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('income_estimation')}}"method="post">
+      <input type="text" name="Capital Gains Past Year" placeholder="Capital Gains Past Year" required="required" /><br>
+      <input type="text" name="Educational Number" placeholder="Educational Number" required="required" /><br>
+      <label for="maritalstatus">Marital Status :</label>
+        <select name="maritalstatus" id="maritalstatus">
+            <option value="0">UnMarried</option>
+            <option value="1">Married</option>
+        </select>
+        <br>
+        <input type="text" name="Age" placeholder="Age" required="required" /><br>
+        <label for="maritalstatus_two">maritalstatus_Other :</label>
+        <select name="maritalstatus_two" id="maritalstatus_two">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+        <br>
+        <input type="text" name="Hours Per Week" placeholder="Hours Per Week" required="required" /><br>
+        <input type="text" name="Capital Loss Last Year" placeholder="Capital Loss Last Year" required="required" /><br>
+        <label for="Gender">Gender :</label>
+        <select name="Gender" id="Gender">
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+        <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Classify</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
