@@ -1,5 +1,8 @@
 # IncomeEstimation
 Income Estimation Classifier - Predicts if user income greater than 50K USD, based on demographic information
+- EDA and Model Developement Can be found at: (`Model Code.ipynb`)
+- Flak Code for API and Frontend Website Can be Found at (`app.py`)
+
 
 ## Software And Tools Requirements
 1. [Github Account](https://github.com/)
